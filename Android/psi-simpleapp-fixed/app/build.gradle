@@ -7,7 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.simpleapp1"
+        applicationId "com.example.simpleapp2"
         minSdk 21
         targetSdk 30
         versionCode 1
@@ -25,7 +25,7 @@ android {
             variant ->
                 variant.outputs.each{
                     output->
-                        def name = "PSiMT.apk"
+                        def name = "PSi-Fixed.apk"
                         output.outputFileName = name
                 }
             }
