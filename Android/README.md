@@ -5,9 +5,8 @@ Product Science Demo Apps highlighting code optimization exercises
 These versions are instrumented- follow docs to update instrumentation:  
 https://product-science.github.io/  
 
-- `simple-android-app-mt` - app name `PSI MT`: demo with delay on separate thread but blocking fast app execution
-- `simple-android-app-mt-fixed` - app name `PSi MT Fixed`: demo with delay synchronous separate enabling improved performance
-
+- `psi-simpleapp-lag` - app name `PSi-Lag.apk`: Kotlin demo with work dispatched to a separate thread blocking main thread
+- `psi-simpleapp-fixed` - app name `PSi-Fixed.apk`: Kotlin demo with work dispatched to a separate thread working in parallel and not blocking main thread
 # Instructions
 
 ## Step 1: Configure Build Environment With PSi Instrumentation And Tokens
