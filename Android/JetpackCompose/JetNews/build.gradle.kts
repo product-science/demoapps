@@ -25,8 +25,8 @@ buildscript {
         maven {
             url = uri("https://maven.pkg.github.com/product-science/PSAndroid")
             credentials {
-                username = "github_user"
-                password = "github_key"
+                username = System.getProperty("github_user")
+                password = System.getProperty("github_key")
             }
         }
 
