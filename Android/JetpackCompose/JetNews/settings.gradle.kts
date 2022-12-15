@@ -32,6 +32,13 @@ dependencyResolutionManagement {
 
         google()
         mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.github.com/product-science/PSAndroid")
+            credentials {
+                username = System.getProperty("github_user")
+                password = System.getProperty("github_key")
+            }
+        }
     }
 }
 rootProject.name = "JetNews"
