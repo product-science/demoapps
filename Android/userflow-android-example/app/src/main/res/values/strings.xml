@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UserFlowAndroidExample</string>
+    <string name="banner_image">Banner Image</string>
+    <string name="avatar">Avatar</string>
+</resources>

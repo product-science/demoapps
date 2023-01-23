@@ -1,0 +1,32 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {
+            url "https://maven.pkg.github.com/product-science/PSAndroid"
+            credentials {
+                username = github_user
+                password = github_key
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven {
+            url "https://maven.pkg.github.com/product-science/PSAndroid"
+            credentials {
+                username = github_user
+                password = github_key
+            }
+        }
+    }
+}
+rootProject.name = "UserFlowAndroidExample"
+include ':app'

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bannerimage"
+        android:contentDescription="@string/banner_image"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bannerbackground" />
+
+    <ProgressBar
+        android:id="@+id/progress_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/bannerimage"
+        app:layout_constraintEnd_toEndOf="@id/bannerimage"
+        app:layout_constraintStart_toStartOf="@id/bannerimage"
+        app:layout_constraintTop_toTopOf="@id/bannerimage" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:contentDescription="@string/avatar"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bannerimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        app:srcCompat="@drawable/avatar" />
+
+    <ProgressBar
+        android:id="@+id/progress_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/avatar"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
