@@ -1,0 +1,17 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url "https://maven.pkg.github.com/product-science/PSAndroid"
+            credentials {
+                username = System.getenv('PSTOOL_MAVEN_USERNAME') ?: ""
+                password = System.getenv('PSTOOL_MAVEN_TOKEN') ?: ""
+            }
+        }
+    }
+}
+rootProject.name = "Simple app"
+include ':app'

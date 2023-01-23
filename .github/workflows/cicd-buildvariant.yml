@@ -1,0 +1,30 @@
+name: CICD BuildVariant
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-plugin:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create productscience.properties
+        run: |
+          echo "productscience.config.tag=internal-project-android:default" > cicd-examples/android-buildvariant/productscience.properties
+          echo "productscience.token=${{ secrets.PSTOOL_TOKEN }}" >> cicd-examples/android-buildvariant/productscience.properties
+
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: assemblePsiRelease
+          build-root-directory: ./cicd-examples/android-buildvariant
+        env:
+          PSTOOL_MAVEN_USERNAME: ${{ secrets.PSTOOL_MAVEN_USERNAME }}
+          PSTOOL_MAVEN_TOKEN: ${{ secrets.PSTOOL_MAVEN_TOKEN }}
+          
+          
+          
