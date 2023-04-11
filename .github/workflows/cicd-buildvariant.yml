@@ -25,6 +25,11 @@ jobs:
         env:
           PSTOOL_MAVEN_USERNAME: ${{ secrets.PSTOOL_MAVEN_USERNAME }}
           PSTOOL_MAVEN_TOKEN: ${{ secrets.PSTOOL_MAVEN_TOKEN }}
+      - run: |
+             cp ./cicd-examples/android-buildvariant/app/build/outputs/apk/psiRelease/PSi-Fixed.apk .
+             ls
+             pwd
+        shell: bash
           
           
           
