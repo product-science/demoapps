@@ -3,20 +3,23 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         maven {
-            url "https://maven.pkg.github.com/product-science/PSAndroid"
-            credentials {
-                username = github_user
-                password = github_key
-            }
+            url "https://artifactory.productscience.app/releases"
+
         }
+        maven { url "https://dl.bintray.com/datadog/datadog-maven" }
     }
+
+
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
-        classpath "com.productscience.transformer:transformer-plugin:0.13.1"
-        classpath "com.productscience.transformer:transformer-instrumentation:0.13.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
 
+        classpath "com.productscience.transformer:transformer-plugin:0.5-SNAPSHOT"
+        classpath "com.productscience.transformer:transformer-instrumentation:0.5-SNAPSHOT"
+
+        classpath("com.datadoghq:dd-sdk-android-gradle-plugin:1.9.0")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
